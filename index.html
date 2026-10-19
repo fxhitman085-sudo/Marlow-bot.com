@@ -19,6 +19,50 @@
   --muted: #999999;
   --border: rgba(255,255,255,.13);
   --white: #ffffff;
+.team-section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.team-card {
+  padding: 35px 20px;
+  border: 1px solid #333;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #171717, #090909);
+}
+
+.team-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.team-role {
+  color: #999;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.team-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+}
+</style>
 }
 
 * {
@@ -988,15 +1032,34 @@ const MARLOW_POLICIES =
   </section>
 
   <div class="divider"></div>
-
-  <!-- OFFICIAL TEAM -->
-  <section id="team">
+<!-- OFFICIAL TEAM -->
+<section id="team" class="team-section">
+  <div class="section-heading">
     <div class="section-label">Behind MARLOW</div>
     <h2 class="section-title">The people behind the name.</h2>
-
     <p class="section-description">
       The people and team associated with the MARLOW project.
     </p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-icon">💻</div>
+      <p class="team-role">DEVELOPER</p>
+      <h3>Raymon</h3>
+    </div>
 
     <div class="team-card">
-      <div class="team-brand">MARLOW</
+      <div class="team-icon">🏆</div>
+      <p class="team-role">OWNER</p>
+      <h3>Fatab</h3>
+    </div>
+
+    <div class="team-card">
+      <div class="team-icon">🤝</div>
+      <p class="team-role">TEAM</p>
+      <h3>FATAB Team</h3>
+    </div>
+  </div>
+      </section>
+
